@@ -2,7 +2,7 @@
 
 云解析DNS提供以下相关API接口。
 
-## 域名管理接口 {#section_m3i_ukh_mvi .section}
+## 域名管理接口 {#section_nrf_mmv_cmh .section}
 
 |API|描述|
 |---|--|
@@ -14,14 +14,14 @@
 |[GetMainDomainName](cn.zh-CN/API文档/域名管理接口/GetMainDomainName.md)|调用GetMainDomainName通过输入的参数，获取主域名名称。|
 |[DescribeDomainLogs](cn.zh-CN/API文档/域名管理接口/DescribeDomainLogs.md)|调用DescribeDomainLogs根据传入参数获取域名的操作日志。|
 
-## 云解析产品管理接口 {#section_kta_jwu_ayn .section}
+## 云解析产品管理接口 {#section_v1j_1fc_ooo .section}
 
 |API|描述|
 |---|--|
 |[DescribeDnsProductInstances](cn.zh-CN/API文档/云解析产品管理接口/DescribeDnsProductInstances.md)|调用DescribeDnsProductInstances根据传入参数获取云解析收费版本产品列表。|
 |[ChangeDomainOfDnsProduct](cn.zh-CN/API文档/云解析产品管理接口/ChangeDomainOfDnsProduct.md)|调用ChangeDomainOfDnsProduct更换云解析产品绑定的域名。|
 
-## 域名分组接口 {#section_wl8_f3l_1qe .section}
+## 域名分组接口 {#section_wz5_0y9_8jm .section}
 
 |API|描述|
 |---|--|
@@ -31,13 +31,13 @@
 |[ChangeDomainGroup](cn.zh-CN/API文档/域名分组接口/ChangeDomainGroup.md)|调用ChangeDomainGroup根据传入参数将域名从原分组更换到新分组。|
 |[DescribeDomainGroups](cn.zh-CN/API文档/域名分组接口/DescribeDomainGroups.md)|调用DescribeDomainGroups根据传入参数获取所有分组列表。|
 
-## 域名找回接口 {#section_5vt_2mh_dky .section}
+## 域名找回接口 {#section_vbr_gbl_ji0 .section}
 
 |API|描述|
 |---|--|
 |[CheckDomainRecord](cn.zh-CN/API文档/域名找回接口/CheckDomainRecord.md)|调用CheckDomainRecord检查指定的解析记录在权威DNS是否存在（生效）。|
 
-## 解析管理接口 {#section_mnb_9lt_mjm .section}
+## 解析管理接口 {#section_8zi_zuj_5ak .section}
 
 |API|描述|
 |---|--|
@@ -52,7 +52,16 @@
 |[DescribeRecordLogs](cn.zh-CN/API文档/解析管理接口/DescribeRecordLogs.md)|调用DescribeRecordLogs根据传入参数获取域名的解析操作日志。|
 |[DescribeSupportLines](cn.zh-CN/API文档/解析管理接口/DescribeSupportLines.md)|调用DescribeSupportLines查询云解析支持的所有线路列表。|
 
-## 解析负载均衡接口 {#section_u6s_o9n_ms9 .section}
+## 请求量统计接口 {#section_ebf_awf_elb .section}
+
+|API|描述|
+|---|--|
+|[DescribeDomainStatisticsSummary](cn.zh-CN/API文档/请求量统计接口/DescribeDomainStatisticsSummary.md)|调用DescribeDomainStatisticsSummary查询用户账号下所有付费域名的请求量列表。|
+|[DescribeRecordStatisticsSummary](cn.zh-CN/API文档/请求量统计接口/DescribeRecordStatisticsSummary.md)|调用DescribeRecordStatisticsSummary查询指定域名下的全部子域名的请求量统计。|
+|[DescribeRecordStatistics](cn.zh-CN/API文档/请求量统计接口/DescribeRecordStatistics.md)|调用DescribeRecordStatistics查询指定子域名请求量的实时数据。|
+|[DescribeDomainStatistics](cn.zh-CN/API文档/请求量统计接口/DescribeDomainStatistics.md)|调用DescribeDomainStatistics查询指定主域名请求量的实时数据。|
+
+## 解析负载均衡接口 {#section_bz2_ysn_2tq .section}
 
 |API|描述|
 |---|--|
@@ -60,7 +69,7 @@
 |[DescribeDNSSLBSubDomains](cn.zh-CN/API文档/解析负载均衡接口/DescribeDNSSLBSubDomains.md)|调用DescribeDNSSLBSubDomains根据传入参数获取解析负载均衡的子域名列表。|
 |[UpdateDNSSLBWeight](cn.zh-CN/API文档/解析负载均衡接口/UpdateDNSSLBWeight.md)|调用UpdateDNSSLBWeight根据传入参数修改解析负载均衡的权重。|
 
-## 批量管理接口 {#section_t3p_k1v_dim .section}
+## 批量管理接口 {#section_28d_ifb_qja .section}
 
 |API|描述|
 |---|--|
