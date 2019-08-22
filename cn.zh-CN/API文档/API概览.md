@@ -2,7 +2,7 @@
 
 云解析DNS提供以下相关API接口。
 
-## 域名管理接口 {#section_qnp_nvv_i5e .section}
+## 域名管理接口 {#section_m3i_ukh_mvi .section}
 
 |API|描述|
 |---|--|
@@ -14,14 +14,14 @@
 |[GetMainDomainName](cn.zh-CN/API文档/域名管理接口/GetMainDomainName.md)|调用GetMainDomainName通过输入的参数，获取主域名名称。|
 |[DescribeDomainLogs](cn.zh-CN/API文档/域名管理接口/DescribeDomainLogs.md)|调用DescribeDomainLogs根据传入参数获取域名的操作日志。|
 
-## 云解析产品管理接口 {#section_1v1_jzd_bag .section}
+## 云解析产品管理接口 {#section_kta_jwu_ayn .section}
 
 |API|描述|
 |---|--|
 |[DescribeDnsProductInstances](cn.zh-CN/API文档/云解析产品管理接口/DescribeDnsProductInstances.md)|调用DescribeDnsProductInstances根据传入参数获取云解析收费版本产品列表。|
 |[ChangeDomainOfDnsProduct](cn.zh-CN/API文档/云解析产品管理接口/ChangeDomainOfDnsProduct.md)|调用ChangeDomainOfDnsProduct更换云解析产品绑定的域名。|
 
-## 域名分组接口 {#section_9db_0si_kdq .section}
+## 域名分组接口 {#section_wl8_f3l_1qe .section}
 
 |API|描述|
 |---|--|
@@ -31,13 +31,13 @@
 |[ChangeDomainGroup](cn.zh-CN/API文档/域名分组接口/ChangeDomainGroup.md)|调用ChangeDomainGroup根据传入参数将域名从原分组更换到新分组。|
 |[DescribeDomainGroups](cn.zh-CN/API文档/域名分组接口/DescribeDomainGroups.md)|调用DescribeDomainGroups根据传入参数获取所有分组列表。|
 
-## 域名找回接口 {#section_je8_hib_hkm .section}
+## 域名找回接口 {#section_5vt_2mh_dky .section}
 
 |API|描述|
 |---|--|
 |[CheckDomainRecord](cn.zh-CN/API文档/域名找回接口/CheckDomainRecord.md)|调用CheckDomainRecord检查指定的解析记录在权威DNS是否存在（生效）。|
 
-## 解析管理接口 {#section_oj6_mxs_pzu .section}
+## 解析管理接口 {#section_mnb_9lt_mjm .section}
 
 |API|描述|
 |---|--|
@@ -52,7 +52,7 @@
 |[DescribeRecordLogs](cn.zh-CN/API文档/解析管理接口/DescribeRecordLogs.md)|调用DescribeRecordLogs根据传入参数获取域名的解析操作日志。|
 |[DescribeSupportLines](cn.zh-CN/API文档/解析管理接口/DescribeSupportLines.md)|调用DescribeSupportLines查询云解析支持的所有线路列表。|
 
-## 解析负载均衡接口 {#section_wv7_z3v_h6z .section}
+## 解析负载均衡接口 {#section_u6s_o9n_ms9 .section}
 
 |API|描述|
 |---|--|
@@ -60,7 +60,7 @@
 |[DescribeDNSSLBSubDomains](cn.zh-CN/API文档/解析负载均衡接口/DescribeDNSSLBSubDomains.md)|调用DescribeDNSSLBSubDomains根据传入参数获取解析负载均衡的子域名列表。|
 |[UpdateDNSSLBWeight](cn.zh-CN/API文档/解析负载均衡接口/UpdateDNSSLBWeight.md)|调用UpdateDNSSLBWeight根据传入参数修改解析负载均衡的权重。|
 
-## 批量管理接口 {#section_bd6_0nf_y3e .section}
+## 批量管理接口 {#section_t3p_k1v_dim .section}
 
 |API|描述|
 |---|--|
