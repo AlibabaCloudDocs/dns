@@ -43,11 +43,11 @@
 根据使用场景不同，分为以下三个使用场景：
 **说明**
 
-url.aliyun.com为跳转前域名，www.aliyun.com为跳转后域名（配置时请更换为实际业务域名）
+url.dns-example.com为跳转前域名，www.aliyun.com为跳转后域名（配置时请更换为实际业务域名）
 
-**场景一：将url.aliyun.com完全转发到www.aliyun.com** 
+**场景一：将** url.dns-example.com **完全转发到www.aliyun.com** 
 
-例如，访问http://url.aliyun.com/a.txt 需要跳转到 http://www.aliyun.com/a.txt
+例如，访问url：http://url.dns-example.com/a.txt 需要跳转到 http://www.aliyun.com/a.txt
 
 配置过程：
 
@@ -73,13 +73,13 @@ url.aliyun.com为跳转前域名，www.aliyun.com为跳转后域名（配置时�
 
 配置后：
 
-![2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4228374161/p245159.png)
+![22](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4409094161/p245667.png)
 
 配置内容参考：
 
     server {
         
-        server_name url.aliyun.com; # url.aliyun.com改为跳转前的域名
+        server_name url.dns-example.com; # url.dns-example.com改为跳转前的域名
     
         location / {
             return 302 http://www.aliyun.com$request_uri; # http://www.aliyun.com 改为跳转后域名
@@ -88,43 +88,70 @@ url.aliyun.com为跳转前域名，www.aliyun.com为跳转后域名（配置时�
 
 
 
-4. 重启Nginx服务
-
-   
-
-
-
+3. 重启服务
 
     cd /usr/local/nginx/sbin #实际操作时更换为安装时配置的路径
     ./nginx -s reload
 
 
 
-5. 验证效果
+4. 解析配置
 
+   Nginx服务配置完毕后，需要将跳转前的域名解析指向到Nginx所在服务器IP上。即需要在域名的DNS服务商处添加一条url.dns-example.com（配置时更换为实际跳转前域名）的A记录指向到47.94.166.148（配置时更换为实际Nginx所在服务器）。
    
 
 
 
 
+* 以云解析为例，详细步骤参考[添加解析](https://help.aliyun.com/knowledge_detail/29725.html?spm=a2c4g.11186623.2.2.7bc845camu9UKi#h2-a-1)，大致步骤如下：
+
+  * 登录[云解析DNS控制台](http://dns.console.aliyun.com/)
+
+    
+  
+
+  
+  <!-- -->
+
+  * 前往域名解析-权威域名-点击需要配置解析的域名进入解析列表页面
+    。
+
+    
+  
+
+  
+  <!-- -->
+
+  * 点击添加解析，进行如下解析配置。
+
+    
+  
+
+  
+
+
+
+
+![333](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2259094161/p245697.png)5. 验证效果
+
     #在服务器上运行
-    curl -v http://gogo.dns-example.com/a.txt
+    curl -v http://url.dns-example.com/a.txt
 
 
 
-![](https://intranetproxy.alipay.com/skylark/lark/0/2021/png/236819/1614671989274-3b7e49fe-96ff-4c7d-a1fa-7f2b1853228e.png)
+![33](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4409094161/p245668.png)
 
 
 
-**场景二：将url.aliyun.com完全转发到www.aliyun.com/b/** 
+**场景二：将** **url.dns-example.com** **完全转发到www.aliyun.com/b/** 
 
-例如，访问http://url.aliyun.com/a.txt 需要跳转到 http://www.aliyun.com/b/a.txt
+例如，访问http://url.dns-example.com/a.txt 需要跳转到 http://www.aliyun.com/b/a.txt
 
 具体配置步骤参考场景一，nginx.conf配置内容参考：
 
     server {
         
-        server_name url.aliyun.com; # url.aliyun.com改为跳转前的域名
+        server_name url.dns-example.com; # url.dns-example.com改为跳转前的域名
     
         location / {
             return 302 http://www.aliyun.com/b$request_uri; # http://www.aliyun.com 改为跳转后域名
@@ -135,15 +162,15 @@ url.aliyun.com为跳转前域名，www.aliyun.com为跳转后域名（配置时�
 
 
 
-**场景三：将url.aliyun.com/xxx.xxx完全转发到http://www.aliyun.com** 
+**场景三：将** **url.dns-example.com** **/xxx.xxx完全转发到http://www.aliyun.com** 
 
-例如，访问http://url.aliyun.com/xxx.xxx需要跳转到http://www.aliyun.com
+例如，访问http://url.dns-example.com/xxx.xxx需要跳转到http://www.aliyun.com
 
 具体配置步骤参考场景一，nginx.conf配置内容参考：
 
     server {
         
-        server_name url.aliyun.com; # url.aliyun.com改为跳转前的域名
+        server_name url.dns-example.com; # url.dns-example.com改为跳转前的域名
     
         location / {
             return 302 http://www.aliyun.com; # http://www.aliyun.com 改为跳转后域名
